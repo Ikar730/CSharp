@@ -1,0 +1,2 @@
+﻿ int firstNumber, secondNumber;
+ 
