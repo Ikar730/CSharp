@@ -22,43 +22,60 @@
 // }
  
 //     }
+// using System;
+
+// class Answer {
+//     static void CheckIfEven(int number)
+//     {
+//       // Введите свое решение ниже
+// if(number %2 == 0) 
+//    Console.WriteLine($"число {number} четное");
+//        else Console.WriteLine($"число {number} нечётное");
+//     }
+  
+
+//   // Не удаляйте и не меняйте метод Main! 
+//     static public void Main(string[] args) {
+//         int number;
+
+//         if (args.Length >= 1) {
+//             number = int.Parse(args[0]);
+//         } else {
+//            // Здесь вы можете поменять значения для отправки кода на Выполнение
+//             number = 6;
+//         }
+
+//         // Не удаляйте строки ниже
+//         CheckIfEven(number);
+//     }
+// }
 using System;
 
 public class Answer {
-    
-  static int FindMax(int a, int b, int c)
+    static void PrintEvenNumbers(int number)
     {
       // Введите свое решение ниже
+ Console.Write($"number = {number}");
+      if(number < 2) return;
+Console.Write(" ->");
+for(var i=2;i<=number;i+=2) Console.Write($"\t{i}");
 
-int max=a;
-if (b > max)
-{
-    max = b;
- }   
-if (c > max)
-{
-    max = c;
- }   
- return max;
-  }
+
+    }
+
 
   // Не удаляйте и не меняйте метод Main! 
-  static public void Main(string[] args) {
-        int a, b, c;
+    static public void Main(string[] args) {
+        int number;
 
-        if (args.Length >= 3) {
-           a = int.Parse(args[0]);
-           b = int.Parse(args[1]);
-           c = int.Parse(args[2]);
+        if (args.Length >= 1) {
+            number = int.Parse(args[0]);
         } else {
            // Здесь вы можете поменять значения для отправки кода на Выполнение
-           a = 5;
-           b = 6;
-           c = 7;
+            number = 6;
         }
 
         // Не удаляйте строки ниже
-        int result = FindMax(a, b, c);
-        System.Console.WriteLine($"{result}");
+        PrintEvenNumbers(number);
     }
 }
