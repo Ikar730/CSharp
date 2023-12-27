@@ -28,32 +28,37 @@ public class Answer {
     
   static int FindMax(int a, int b, int c)
     {
-int a = max;
-if (b > a)
+      // Введите свое решение ниже
+
+int max=a;
+if (b > max)
+{
     max = b;
+ }   
 if (c > max)
+{
     max = c;
-int result = FindMax(a, b, c);
-        System.Console.WriteLine($"{result}");
-//  System.Console.WriteLine($"Число `{max}` является максимальным");
-    }
-}
+ }   
+ return max;
+  }
 
+  // Не удаляйте и не меняйте метод Main! 
+  static public void Main(string[] args) {
+        int a, b, c;
 
-//  Не удаляйте и не меняйте метод Main! 
-     static public void Main(string[] args) {
-         int firstNumber, secondNumber;
-
-         if (args.Length >= 2) {
-             firstNumber = int.Parse(args[0]);
-             secondNumber = int.Parse(args[1]);
-         } else {
-            // Здесь вы можете поменять значения для отправки кода на Выполнение
-             firstNumber = 5;
-             secondNumber = 5;
+        if (args.Length >= 3) {
+           a = int.Parse(args[0]);
+           b = int.Parse(args[1]);
+           c = int.Parse(args[2]);
+        } else {
+           // Здесь вы можете поменять значения для отправки кода на Выполнение
+           a = 5;
+           b = 6;
+           c = 7;
         }
 
         // Не удаляйте строки ниже
-        CompareNumbers(firstNumber, secondNumber);
-     }
- }             
+        int result = FindMax(a, b, c);
+        System.Console.WriteLine($"{result}");
+    }
+}
