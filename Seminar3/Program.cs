@@ -1,2 +1,61 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Задайте массив. Напишите программу, которая определяет,
+// присутствует ли заданное число в массиве. Программа
+// должна выдать ответ: Да/Нет.
+// Примеры
+// [1 3 4 19 3], 8 => Нет
+// [-4 3 4 1], 3 => Да
+
+// тип_данных[] имя_массива = ....
+// int[] array = { 11, 22, 33, 44, 55, 66, 77 };
+// Console.Write("Введите число для поиска: ");
+// int numberForSearch = Convert.ToInt32(Console.ReadLine());
+// bool isFound = false; // Число НЕ найдено
+// // точка старта; условие;
+// for (int i = 0; i < array.Length; i++)
+// {
+//     if (numberForSearch == array[i])
+//     {
+//         isFound = true; // Ура, число найдено :)
+//         break; // Ломаем цикл, если нашли число в массиве
+//     }
+// }
+// if (isFound) // isFound == true
+// {
+//     Console.WriteLine("Да");
+// }
+// else // isFound == false
+// {
+//     Console.WriteLine("Нет");
+// }
+
+// Задайте массив из 10 элементов, заполненный числами из
+// промежутка [-10, 10]. Замените отрицательные элементы на
+// положительные, а положительные на отрицательные.
+// Пример
+// [1 -5 6]
+// => [-1 5 -6]
+
+// int[] array = { -1, -2, 7, 9, 8, -4, -7, -9, 1, 0 };
+// Console.WriteLine($"Массив ДО: [ {string.Join("; ", array)} ]");
+// for (int i = 0; i < array.Length; i++)
+// {
+//     array[i] *= -1; // array[i] = array[i] * -1;
+// }
+// Console.WriteLine($"Массив ПОСЛЕ: [ {string.Join("; ", array)} ]");
+
+// Найдите произведения пар чисел в одномерном массиве. Парой
+// считаем первый и последний элемент, второй и предпоследний и
+// т.д. Результат запишите в новый массив.
+// Пример
+// [1 3 2 4 2 3] => [3 6 8]
+// [2 3 1 7 5 6 3] => [6 18 5] (элемент 7 не имеет пары)
+
+// int[] array = { 11, 22, 33, 44, 55, 66, 77 };
+// int[] result = new int[array.Length / 2]; // 7 / 2 = 3
+// Console.WriteLine($"Массив: [ {string.Join("; ", array)} ]");
+// // Массив result, состоящий из 3 элементов: [0,0,0]
+// for (int i = 0, j = array.Length - 1; i < result.Length; i++, j--)
+// {
+//     result[i] = array[i] * array[j];
+// }
+// Console.WriteLine($"Результат:[ {string.Join("; ", result)} ]");
