@@ -47,3 +47,76 @@ while (i < n)
     }
     i = i + 1;
 }
+
+//Задача 3. Дано N гирь с разным весом  в случайном порядке. Определить вес самой тяжелой гири.
+
+int size = 5;
+int[] arrey = { 1, 2, 3, 4, 5 };
+int i = 0;
+
+while (i < size)
+{
+    arrey[i] = 0;
+    Console.Writeline(arrey[i]);
+    i = i + 1;
+}
+Console.Writeline(max);
+
+
+// Цикл FOR
+for (int i = 0; i < 10; i = i + 1;)  //1. инициализация 2. условие 3. модификация
+{
+    //...                                                   тело цикла
+}
+
+//Рекомендации к применению-проход по элементам массива в задачах, где число итераций фиксировано
+
+int[] arr = { 1, 2, 3, 4, 5 };
+for (int i = 1; i < arr.Length; i = i + 1)
+{
+    Console.Write($"{arrey[i]} ");
+}
+
+
+int N = 100;
+int sum = 0;
+for (int i = 1; i < N; i = i + 1)
+{
+    sum = sum + 1;
+}
+Console.Writeline(sum);
+
+
+//Цикл WHILE. Рекомендации к применению-задачи, где верхняя граница итераций неизвестна.Пример-посимвольное чтение файла.
+
+
+//Цикл FOREACH.
+
+int[] arrey = { 1, 2, 3, 4, 5 };
+
+foreach (int e in arrey)  //1.переменная цикла 2.массив. Т.е. для всех элементов в массиве.
+{                             //тело ц.
+    Console.Writeline(e);  //тело цикла
+}                           //тело ц.
+
+//Пример с FOREACH
+
+max = arrey[0];
+for (int i = 0; i < N; i++)
+{
+    if (arrey[i] > max)
+    {
+        max = arrey[i];
+    }
+}
+Console.Writeline(max);
+
+max = arrey[0];
+foreach (int e in arrey)
+{
+    if (e > max)
+    {
+        max = e;
+    }
+}
+Console.Writeline(max);
