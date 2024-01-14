@@ -37,3 +37,28 @@ void PrintSquares(int limit)
 PrintSquares(5);
 PrintSquares(10);
 PrintSquares(15);
+
+// Задача 3.
+//
+void ZeroEvenElements(int[] arr)
+{
+    for(i=0;i<arr.Length;i++)
+    {
+        if(arr[i]%2==0)
+        {
+            arr[i]=0;
+        }
+    }
+}
+
+void PrintArrey(int[] arr)
+{
+    foreach(int e in arr)
+    {
+        Console.Write($"{e} ");
+    }
+}
+
+int arrey={1,2,3,4,5};
+ZeroEvenElements(arrey);
+PrintArrey(arrey);
